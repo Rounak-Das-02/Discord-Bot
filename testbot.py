@@ -1,5 +1,6 @@
 import discord
 from discord.ext import commands
+import json
 
 client = discord.Client()
 bot = commands.Bot(command_prefix = ".")
@@ -54,5 +55,7 @@ async def unban(ctx , * , member):
             return
 
 
-   
-bot.run("Nzc4NjA3MzM4MTMwMjQzNjI0.X7Uclw.08hPUqJSqVMBwvy9_QC1NlIH4OQ")
+f = open(r"E:\discord bot\token.json", )
+s = json.load(f)
+
+bot.run(s["Token"])
