@@ -41,7 +41,7 @@ class events(commands.Cog):
         if isinstance(error , commands.CommandError):
             await ctx.channel.send("Command Error , Example : \n .clear 5")
 
-    ###########################################################
+    ############################################################
 
 
 
