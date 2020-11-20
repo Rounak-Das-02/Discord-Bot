@@ -28,7 +28,7 @@ async def on_command_error(ctx , error):
         await ctx.send("Invalid Command")
 
 
-f = open(r"E:\discord bot\token.json", )
+f = open(r".\tokens\token.json", )
 s = json.load(f)
 
 client.run(s["Token"])
