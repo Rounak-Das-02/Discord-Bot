@@ -15,16 +15,20 @@ class music(commands.Cog):
 
     def check_queue():
         pass
+
+
     
 
-    def my_after(error):
-        coro = self.client.channel.send('Song is done!')
-        fut = asyncio.run_coroutine_threadsafe(coro, client.loop)
-        try:
-            fut.result()
-        except:
-            # an error happened sending the message
-            pass
+    # def my_after(error):
+    #     coro = self.client.channel.send('Song is done!')
+    #     fut = asyncio.run_coroutine_threadsafe(coro, client.loop)
+    #     try:
+    #         fut.result()
+    #     except:
+    #         # an error happened sending the message
+    #         pass
+
+
     
     @commands.command(name = "play")        
     async def yt_music(self , ctx , * , search):        ##For playing from youtube
@@ -69,12 +73,9 @@ class music(commands.Cog):
             await ctx.voice_client.disconnect()
 
         except Exception as e:
-            await ctx.channel.send(f"Error : {e}")
+            # await ctx.channel.send(f"Error : {e}")
+            print("{}".format(e))
 
-    @commands.command()
-    async def pause(self , ctx):
-        ctx.voice_client.pause()
-        await ctx.channel.send("paused")
         
 
     @commands.command()
